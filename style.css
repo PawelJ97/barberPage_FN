@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Gurmukhi:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,700&display=swap');
+/* ---GENERAL OPTIONS--- */
+/*Creating for a screen width of 320px +*/
+:root{
+    --mainColor: #CFB53B;
+    --silver: #C0C0C0;
+    --darker: #00000080;
+    font-size: 16px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+    background-color: #151515;
+}
+.container{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2{
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: var(--mainColor);
+    filter: drop-shadow(0 0 0.2rem var(--mainColor));
+}
+h3{
+    text-align: center;
+    color: var(--silver);
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 2rem;
+}
+p{
+    text-align: center;
+    color: var(--silver);
+    font-size: .9rem;
+    letter-spacing: 0.1rem;
+    flex-wrap: wrap;
+    margin:10%;
+}
+/* ---END GENERAL OPTIONS--- */
+
+/* ---NAVBAR--- */
+/* ---END NAVBAR--- */
+
+/* ---HOME--- */
+/*  background setting */
+#home{
+    background-image: url(./img/bg/barberSmall.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+}
+/* Darkening background */
+#home::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--darker);
+    z-index: -1;
+}
+#home .home h1{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    letter-spacing: .3rem;
+    color: var(--silver);
+}
+/* Using animation to create the effect of changing the color of the caption
+on the home page(adding nbsp to html to create a space before the beginning of the text)*/
+#home .home h1::before{
+    content: attr(data-text);
+    position: absolute;
+    color: var(--mainColor);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid var(--mainColor);
+    animation: txtGlowAnimate 5s linear infinite;
+    filter: drop-shadow(0 0 .5rem var(--mainColor)) drop-shadow(0 0 3rem var(--mainColor)); 
+}
+/* Settings for a call-to-action button that will take the user
+to the "contact us" section and hover effect */
+#home .home a.cta{
+    position: absolute;
+    top: 60%;
+    transform: translate(0, -60%);
+    width: 50vmin;
+    height: 8vmax;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 50px;
+    letter-spacing: .1rem;
+    border: 2px solid var(--mainColor);
+    color: var(--mainColor);
+    overflow: hidden;
+}
+/* cta span */
+#home .home .cta span{
+    font-size: .9rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+/* Create a hover effect that, when hovered over, moves 
+between texts placed in html (span) */
+#home .home .cta span:nth-child(1){
+    transform: translateX(-100%);
+}
+#home .home .cta:hover span:nth-child(1){
+    transform: translateX(0);
+}
+#home .home .cta span:nth-child(2){
+    transform: translateX(0);
+}
+#home .home .cta:hover span:nth-child(2){
+    transform: translateX(100%);
+}
+/* ---ABOUT US--- */
+#about-us .about{
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    padding: 200px 0;
+}
+/* Setting all counters */
+#about-us .about .counter-wrapper{
+    position: relative;
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+}
+#about-us .about .counter-wrapper .counter{
+    width: 90%;
+    height: 25vh;
+    border: 2px solid var(--mainColor);
+    padding: .5rem;
+    position: relative;
+    border-radius: 50%;
+    border-bottom: 10px solid var(--mainColor);
+}
+#about-us .about .counter-wrapper .counter .icon{
+    margin: .3rem auto;
+    height: 60px;
+    width: 60px;
+}
+#about-us .about .counter-wrapper .counter .icon img{
+    height: 100%;
+    width: 100%;
+}
+#about-us .about .counter-wrapper .counter span.num{
+    color: #C0C0C0;
+    display: grid;
+    font-size: 2rem;
+    line-height: 1.6rem;
+}
+#about-us .about .counter-wrapper .counter span.text{
+    color: #C0C0C0;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 2rem;
+}
+
+
+
+
+/* ---END ABOUT US--- */
+/* ---END HOME--- */
+
+/* ---ANIMATION--- */
+/* Animation applied to home h1 as an effect for the main caption */
+@keyframes txtGlowAnimate{
+    0%, 10%, 100%{
+        width: 0;
+    }
+    70%, 90%{
+        width: 100%;
+    }
+}
+/* END ANIMATION */
