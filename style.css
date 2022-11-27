@@ -1,74 +1,162 @@
-@import url('https://fonts.googleapis.com/css2?family=Tiro+Gurmukhi:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,700&display=swap');
-/* ---GENERAL OPTIONS--- */
-/*Creating for a screen width of 320px +*/
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900&display=swap');
+/*Creating for a screen width of 320px -> xxx*/ 
 :root{
     --mainColor: #CFB53B;
     --silver: #C0C0C0;
     --darker: #00000080;
-    font-size: 16px;
+    --bgColor:#151515;
+    font: 16px 'Raleway', sans-serif;
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
 }
 html{
     scroll-behavior: smooth;
-    background-color: #151515;
+}
+body{
+    background-color: var(--bgColor);
 }
 .container{
     min-height: 100vh;
-    width: 100vw;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 h2{
-    text-align: center;
     font-size: 1.4rem;
     margin-bottom: .5rem;
     text-transform: uppercase;
     letter-spacing: .2rem;
     color: var(--mainColor);
-    filter: drop-shadow(0 0 0.2rem var(--mainColor));
+    filter: drop-shadow(0 0 0.3rem var(--mainColor));
 }
 h3{
     text-align: center;
     color: var(--silver);
     font-size: 1rem;
     letter-spacing: 0.2rem;
-    margin-bottom: 2rem;
+    margin: 0rem 1rem 1rem 1rem;
 }
 p{
     text-align: center;
     color: var(--silver);
-    font-size: .9rem;
+    font-size: .8rem;
     letter-spacing: 0.1rem;
     flex-wrap: wrap;
-    margin:10%;
+    margin:1rem;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.icon{
+    margin: .2rem auto;
+    height: 60px;
+    width: 60px;
+}
+.icon img{
+    height: 100%;
+    width: 100%;
+}
+ul li{
+    list-style: none;
+}
+.digits{
+    font:italic 900 .8rem 'Roboto';
+    
 }
 /* ---END GENERAL OPTIONS--- */
+
+/* ---STYLE TEMPLATES--- */
+/* Glowing card ---- Used in : services, testimonial */
+.glowing-card-box{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 2rem;
+    z-index: 1;
+}
+.glowing-card-wrapper{
+    position: relative;
+    width:80%;
+    padding:1.5rem;
+    margin: 1rem .5rem;
+    border: 2px solid var(--mainColor);
+    box-shadow: 0px 0px 12px 0px var(--mainColor);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.glowing-card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 1rem;
+}
+/* end Glowing card - */
+
+/* Glass card ---- Used in : team*/
+.glass-card-box{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 2rem;
+}
+.glass-card-wrapper{
+    position: relative;
+    width: 80%;
+    padding: 1.5rem;
+    margin: 1rem .5rem;
+    background: rgba(255, 255, 255, 0.06);
+    border: 2px solid rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 15px 35px rgba(21, 21, 21, 0.6);/*bgcolor saturation*/
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(.6rem) saturate(180%);
+}
+
+.glass-card-content{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: .7;
+    transition: .5s;
+    gap: 1rem;
+}
+/* End Glass card- */
+/* --- END STYLE TEMPLATES--- */
 
 /* ---NAVBAR--- */
 /* ---END NAVBAR--- */
 
 /* ---HOME--- */
 /*  background setting */
-#home{
-    background-image: url(./img/bg/barberSmall.jpg);
-    background-size: cover;
-    background-position: top center;
+.home-container{
+    background:url(a.jpg) no-repeat center/cover fixed;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     z-index: 1;
 }
 /* Darkening background */
-#home::after{
+.home-container::after{
     content: "";
     position: absolute;
     top: 0;
@@ -78,16 +166,18 @@ p{
     background-color: var(--darker);
     z-index: -1;
 }
-#home .home h1{
+
+/*caption */
+.home-container h1{
     position: relative;
     text-transform: uppercase;
-    font-size: 1.4rem;
-    letter-spacing: .3rem;
+    font-size: 1.6rem;
+    letter-spacing: .2rem;
     color: var(--silver);
 }
 /* Using animation to create the effect of changing the color of the caption
-on the home page(adding nbsp to html to create a space before the beginning of the text)*/
-#home .home h1::before{
+on the home page(adding "nbsp" to html to create a space before the beginning of the text)*/
+.home-container h1::before{
     content: attr(data-text);
     position: absolute;
     color: var(--mainColor);
@@ -99,97 +189,386 @@ on the home page(adding nbsp to html to create a space before the beginning of t
 }
 /* Settings for a call-to-action button that will take the user
 to the "contact us" section and hover effect */
-#home .home a.cta{
-    position: absolute;
-    top: 60%;
-    transform: translate(0, -60%);
-    width: 50vmin;
-    height: 8vmax;
-    text-align: center;
+.home-container a.cta{
+    position: relative;
+    /* display: flex; */
+    width: 50vw;
+    height: 7vh;
+    margin: 1rem auto;
+    /* text-align: center; */
+    /* align-content: center; */
     text-transform: uppercase;
-    text-decoration: none;
-    line-height: 50px;
     letter-spacing: .1rem;
     border: 2px solid var(--mainColor);
     color: var(--mainColor);
     overflow: hidden;
 }
 /* cta span */
-#home .home .cta span{
-    font-size: .9rem;
+.home-container .cta span{
     position: absolute;
-    top: 0;
-    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+    /* inset: 0 0 0 0; */
+    /* top: 0;
+    left: 0; */
     width: 100%;
     height: 100%;
     transition: 1s;
 }
 /* Create a hover effect that, when hovered over, moves 
 between texts placed in html (span) */
-#home .home .cta span:nth-child(1){
+.home-container .cta span:nth-child(1){
     transform: translateX(-100%);
 }
-#home .home .cta:hover span:nth-child(1){
+.home-container .cta:hover span:nth-child(1){
     transform: translateX(0);
 }
-#home .home .cta span:nth-child(2){
+.home-container .cta span:nth-child(2){
     transform: translateX(0);
 }
-#home .home .cta:hover span:nth-child(2){
+.home-container .cta:hover span:nth-child(2){
     transform: translateX(100%);
 }
-/* ---ABOUT US--- */
-#about-us .about{
-    flex-direction: column;
+/* ---END HOME--- */
+
+/* ---ABOUT US---> Used Glass card<--- */
+#about-us{
+    position: relative;
+}
+#about-us::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,
+                            rgba(0, 0, 0, 0.6),
+                            rgba(207, 180, 59, 0.5));
+    clip-path: circle(20% at right 80%);
+}
+#about-us::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,
+                            rgba(207, 180, 59, 0.5),
+                            rgba(0, 0, 0, 0.6));
+    clip-path: circle(20% at left 40%);
+    z-index: -1;
+}
+.about-container{
+    /* flex-direction: column; */
     text-align: center;
-    margin: 0 auto;
-    padding: 200px 0;
+    margin: 10rem auto 5rem 0; 
 }
 /* Setting all counters */
-#about-us .about .counter-wrapper{
-    position: relative;
-    width: 85vw;
-    display: flex;
+.about-container .counter-wrapper{
     flex-direction: column;
-    align-items: center;
-    gap:1rem;
+    gap:2rem;
+    padding: 6rem .6rem;
 }
-#about-us .about .counter-wrapper .counter{
-    width: 90%;
-    height: 25vh;
+.about-container .counter-wrapper .counter-content{
+    width: 82%;
     border: 2px solid var(--mainColor);
-    padding: .5rem;
-    position: relative;
+    padding: 1rem 2rem;
+    /* position: relative; */
     border-radius: 50%;
     border-bottom: 10px solid var(--mainColor);
 }
-#about-us .about .counter-wrapper .counter .icon{
-    margin: .3rem auto;
-    height: 60px;
-    width: 60px;
-}
-#about-us .about .counter-wrapper .counter .icon img{
-    height: 100%;
-    width: 100%;
-}
-#about-us .about .counter-wrapper .counter span.num{
+.about-container .counter-wrapper .counter-content span.num{
     color: #C0C0C0;
     display: grid;
-    font-size: 2rem;
-    line-height: 1.6rem;
+    font-size: 3.2rem;
+    line-height: 1.8rem;
 }
-#about-us .about .counter-wrapper .counter span.text{
+.about-container .counter-wrapper .counter-content span.text{
     color: #C0C0C0;
-    font-size: 1rem;
+    font-size: .8rem;
     text-align: center;
-    line-height: 2rem;
+    line-height: 2.8rem;
+    margin: auto auto;
+}
+/* ---END ABOUT US--- */
+
+/* ---SERVICES--- */
+.services-container{
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 7rem;
+}
+.services-container .service-wrapper{
+    transition: .9s; 
+}
+.services-container .service-wrapper p{
+    margin: 1rem 0;
+    display: flex;
+    margin-bottom: 2rem;
+}
+.services-container .service-wrapper .price{
+    font-size: 3rem;
+    margin-top: auto;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: var(--mainColor);
+    filter: drop-shadow(0 0 0.3rem var(--mainColor));
+    
+}
+.services-container .service-wrapper:nth-child(1):hover{
+    background:linear-gradient(45deg,
+                            rgba(0, 0, 0, 0.6) 0%,
+                            rgba(16, 16, 16, 0.5) 100%),
+                            url(./img/bg/bg-service-hover-haircut.jpg);
+    background-size: cover;
+    background-position: top center;
+}
+.services-container .service-wrapper:nth-child(2):hover{
+    background:linear-gradient(45deg,
+                            rgba(0, 0, 0, 0.6) 0%,
+                            rgba(16, 16, 16, 0.6) 100%),
+                            url(./img/bg/bg-service-hover-razor.jpg);
+    background-size: cover;
+    background-position: top center;
+}
+.services-container .service-wrapper:nth-child(3):hover{
+    background:linear-gradient(45deg,
+                            rgba(0, 0, 0, 0.6) 0%,
+                            rgba(16, 16, 16, 0.5) 100%),
+                            url(./img/bg/bg-service-hover-beard.jpg);
+    background-size: cover;
+    background-position: top center;
+}
+.services-container .service-wrapper:nth-child(4):hover{
+    background:linear-gradient(45deg,
+                            rgba(0, 0, 0, 0.6) 0%,
+                            rgba(16, 16, 16, 0.5) 100%),
+                            url(./img/bg/bg-service-hover-combo.jpg);
+    background-size: cover;
+    background-position: top center;
+}
+.services-container .service-wrapper:hover{
+    transform: translateY(-1.3rem);
+    box-shadow: 0px 6px 12px 0px var(--mainColor);
+    
+}
+.services-container .service-wrapper:hover p{
+    color: #ffffff;
+} 
+/* ---END SERVICES--- */
+
+/*---TEAM ---> STYLE GLASS TEMPLE <---*/
+/* Setting team section
+Making the background effect of circles */
+#team{
+    position: relative;
+}
+#team::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,
+                            rgba(0, 0, 0, 0.6),
+                            rgba(207, 180, 59, 0.5));
+    clip-path: circle(20% at right 70%);
+}
+#team::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,
+                            rgba(207, 180, 59, 0.5),
+                            rgba(0, 0, 0, 0.6));
+    clip-path: circle(20% at left 30%);
+    z-index: -1;
+}
+.team-container{
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 7rem;
+}
+/* Setting the team section */
+.team-container .team-box{
+    z-index: 1;
+}
+.team-container .team-box .team-wrapper:hover .team-content{
+    opacity: 1;
+}
+.team-container .team-box .team-wrapper .team-content .team-description{
+    margin-bottom: 1.2rem;
+}
+/* Setting the appearance of the social-media icons */
+.team-container .team-box .team-wrapper .social-media{
+    position: absolute;
+    bottom: .5rem;
+    display: flex;
+}
+/* creating the effect of icons appearing on hover
+with a delay created based on the "--i" that was 
+ created in html */
+.team-container .team-box .team-wrapper .social-media li{
+    margin: 0 .7rem;
+    transform: translateY(1.8rem);
+    opacity: 0;
+    transition: .5s;
+    transition-delay:calc(0.1s * var(--i));
+}
+.team-container .team-box .team-wrapper:hover .social-media li {
+    transform: translateY(0);
+    transition: .5s;
+    opacity: 1;
+    transition-delay:calc(0.1s * var(--i));
+}
+/* team member icon design */
+.team-container .team-box .team-wrapper .social-media li a{
+    color: var(--mainColor);
+    filter: drop-shadow(0 0 .3rem var(--mainColor));
+    font-size: 1.5rem;
+    transition: .5s;
+}
+/* team member photo settings */
+.team-container .team-box .team-wrapper .team-content .team-img{
+    position: relative;
+    width: 40vw;
+    height: 20vh;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--mainColor);
+}
+/* ---END TEAM--- */
+
+/* ---TESTIMONIAL--- */
+.testimonial-container{
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 7rem;
+}
+.testimonial-container .testimonial{
+    width:100%;
+}
+.testimonial-container .quote {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    color: var(--mainColor);
+    font-size: 20px;
+}
+
+.testimonial-container .testimonial-wrapper{
+    position: relative;
+    z-index: 1;
+    margin: 5rem auto 1rem auto;
+    overflow: visible;
+} 
+.testimonial-container .testimonial-wrapper .testimonial-photo{
+    position: absolute;
+    top: -65px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.testimonial-container .testimonial-wrapper .testimonial-photo img{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.testimonial-container .testimonial-wrapper .user-info{
+    padding: 0;
+}
+.testimonial-container .testimonial-wrapper .user-info p{
+    margin: 1rem 0;
+    text-align: left;
+}
+.stars{
+    color: var(--mainColor);
+    filter: drop-shadow(0 0 0.3rem var(--mainColor));
+}
+.owl-theme .owl-dots .owl-dot span{
+    background-color: var(--mainColor);
+    width: .8rem;
+    height: .8rem;
+}
+/* ---END TESTIMONIAL--- */
+
+/* ---FOOTER--- */
+.footer-container{
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #0d0d0d;
+}
+.footer-container .company-logo-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    gap:.5rem;
+}
+.footer-container .company-logo-details h2.logo-name{
+    max-width: 160px;
+    margin:0 0;
+    padding: auto;
+}
+.footer-container .company-logo-details img{
+    width:60px;
+    height: 60px;
+}
+
+.footer-container .footer-box p{
+    margin: .5rem 0 1rem 0;
+}
+.footer-container .footer-box h3{
+    margin: 1rem 0;
+}
+
+/* social media */
+.footer-container .social-media{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem 0 1rem 0;
+}
+.footer-container .social-media li a{
+    padding: 0 1rem;
+    color: var(--mainColor);
+    font-size: 2rem;
+}
+.footer-container .social-media li a:hover .fa{
+    transform: rotateY(360deg);
+}
+.footer-container .social-media li a:hover .fa{
+    transition: .7s;
+}
+/* company details */
+.footer-container .company-details{
+    color: var(--mainColor);
+    font-size: 2rem;
 }
 
 
 
 
-/* ---END ABOUT US--- */
-/* ---END HOME--- */
+
+/* ---END FOOTER--- */
+
 
 /* ---ANIMATION--- */
 /* Animation applied to home h1 as an effect for the main caption */
