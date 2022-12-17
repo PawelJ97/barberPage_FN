@@ -1,409 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
-    <link rel="stylesheet" href="./OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="description" content="This is a website of salon ragnarok barber">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <Link rel="stylesheet" href="style.css">
-    <title>Barber</title>
+    <title>Ragnarok Barber</title>
 </head>
+
 <body>
     <!--HEADER SECTION-->
-
+    <header id="header" class="header">
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+        <div class="nav-bar">
+            <div class="logo"><img src="./img/icons/logo-R.png" alt="" /></div>
+            <div class="nav-list">
+                <div class="hamburger"><div class="bar"></div></div>
+                <ul>
+                    <li><a href="#home-section" data-after="Home">Home</a></li>
+                    <li><a href="#about-section" data-after="about">about</a></li>
+                    <li><a href="#services-section" data-after="services">services</a></li>
+                    <li><a href="#team-section" data-after="team">team</a></li>
+                    <li><a href="#testimonial-section" data-after="testimonial">testimonial</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </header>
     <!--END HEADER SECTION-->
-
-    <!--HOME SECTION-->
     <main>
-        <section id="home">
-            <div class="home-container container">
-                <h1 data-text="&nbsp;Ragnarok barber">&nbsp;Ragnarok barber</h1>
-                <a href="#" type="button" class="cta">
-                    <span>we don't bite &#9986;</span>
-                    <span>Contact us &#9986;</span>
-                </a>
+        <!--HOME SECTION-->
+        <section id="home-section" class="home container">
+            <h1 class="home__title" data-text="&nbsp;Ragnarok&nbsp;">&nbsp;Ragnarok&nbsp;</h1>
+            <span class="home__subtitle">Professional barber</span>
+            <div class=" home_action">
+                <a href="#" type="button" class="home_btn text--golden-glow">Contact us</a>
             </div>
         </section>
-    <!--END HOME SECTION-->
+        <!--END HOME SECTION-->
 
-    <!--END ABOUT US-->
-        <section id="about-us">
-            <div class="about-container container ">
-                    <h2>About us</h2>
-                    <h3>Story of Ragnarok barber</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit. Aperiam neque natus placeat 
-                        alias eius ipsam nesciunt enim maiores praesentium doloremque!
-                        Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit. Aperiam neque natus placeat 
-                        alias eius ipsam nesciunt enim maiores
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Harum, saepe aspernatur! Rem iste ipsam sapiente voluptatibus 
-                        rerum. Unde aliquam similique quia architecto totam doloribus 
-                        adipisci, distinctio pariatur illo rem repellendus repellat iure 
-                        recusandae voluptates velit aliquid porro quas voluptas excepturi 
-                        voluptatibus error iste. Illum id assumenda repellendus vitae! 
-                    </p>
-                <div class="counter-box glass-card-box">
-                    <div class="counter-wrapper glass-card-wrapper">
-                        <div class="counter-content">
-                            <div class="icon"><img src="./img/icons/icon-razor.png"/></div>
-                            <span class="num" data-value="2400">000</span>
-                            <span class="text">haircuts made</span>
-                        </div>
-                        <div class="counter-content">
-                            <div class="icon"><img src="./img/icons/icon-happy-face.png"/></div>
-                            <span class="num" data-value="1527">000</span>
-                            <span class="text">positive feedback</span>
-                        </div>
-                        <div class="counter-content">
-                            <div class="icon"><img src="./img/icons/icon-graduation-cap.png"/></div>
-                            <span class="num" data-value="272">000</span>
-                            <span class="text">Trainings conducted</span>
-                        </div>
-                        <div class="counter-content">
-                            <div class="icon"><img src="./img/icons/icon-graduation-cap.png"/></div>
-                            <span class="num" data-value="272">000</span>
-                            <span class="text">Trainings conducted</span>
-                        </div>
-                    </div>
-                </div class="counter-box">
+        <!--ABOUT US-->
+        <section id="about-section" class="about container circle-bg">
+            <div class="about_intro section-intro col-s-9 col-6">
+                <h2 class="text--golden-glow">About us</h2>
+                <h3>Story of Ragnarok</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Aperiam neque natus placeat
+                    alias eius ipsam nesciunt enim maiores praesentium doloremque!
+                    Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Aperiam neque natus placeat
+                    alias eius ipsam nesciunt enim maiores
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Harum, saepe aspernatur! Rem iste ipsam sapiente voluptatibus
+                    rerum. Unde aliquam similique quia architecto totam doloribus
+                    adipisci, distinctio pariatur illo rem repellendus repellat iure
+                    recusandae voluptates velit aliquid porro quas voluptas excepturi
+                    voluptatibus error iste. Illum id assumenda repellendus vitae!
+                </p>
+            </div>
+            <div class="about_wrapper glass-card-wrapper col-s-8 col-9">
+                <div class="about_counter col-s-12 col-12">
+                    <div class="icon"><img src="./img/icons/icon-razor.png" /></div>
+                    <span class="num" data-value="2400">000</span>
+                    <span class="text">Haircuts<br>made</span>
+                </div>
+                <div class="about_counter col-s-12 col-12">
+                    <div class="icon"><img src="./img/icons/icon-happy-face.png" /></div>
+                    <span class="num" data-value="1527">000</span>
+                    <span class="text">Positive<br>feedback</span>
+                </div>
+                <div class="about_counter col-s-12 col-12">
+                    <div class="icon"><img src="./img/icons/icon-graduation-cap.png" /></div>
+                    <span class="num" data-value="272">000</span>
+                    <span class="text">Trained<br>barbers </span>
+                </div>
+                <div class="about_counter col-s-12 col-12">
+                    <div class="icon"><img src="./img/icons/icon-barber.png" /></div>
+                    <span class="num" data-value="2019">000</span>
+                    <span class="text">Services<br>since</span>
+                </div>
             </div>
         </section>
-    <!--END ABOUT US-->
+        <!--END ABOUT US-->
 
-    <!--SERVICES-->
-        <section id="services">
-            <div class="services-container container">
-                <h2>Popular services</h2>
-                <h3>A wide range of services in the care of your hair</h3>
-                <div class="services-box glowing-card-box">
-                    <div class="service-wrapper glowing-card-wrapper">
-                        <div class="icon">
-                            <img src="./img/icons/icon-razor.png"/>
-                        </div>
-                        <div class="service-content glowing-card-content">
-                            <h2>Perfect Haircut</h2>
-                            <p>
-                                The haircut begins with a head wash and ends 
-                                with the application of top quality cosmetics. 
-                                Each haircut is carefully tailored to the style and shape 
-                                of the client's head.
-                                
-                            </p>                           
-                            <div class="price digits"><span>15$</span></div>
-                        </div>
+        <!--SERVICES-->
+        <section id="services-section" class="services container">
+            <div class="services_intro section-intro col-s-9 col-6">
+                <h2 class="text--golden-glow">Popular services</h2>
+                <h3>The most popular services</h3>
+                <p>
+                    A wide range of hair care services performed by highly
+                    specialized hairdressers with the best products on the market
+                </p>
+            </div>
+            <div class="services_wrapper col-s-11 col-9">
+                <div class="services_content col-s-12 col-12 ">
+                    <div class="icon">
+                        <img src="./img/icons/icon-razor.png" />
                     </div>
-                    <div class="service-wrapper glowing-card-wrapper">                         
-                        <div class="icon">
-                            <img src="./img/icons/icon-razor.png"/>
-                        </div>                                
-                        <div class="service-content glowing-card-content">
-                            <h2>Razor shave</h2>
-                            <p>
-                                We take a professional and safe approach to shaving. 
-                                We start with a hot towel that relaxes the pores and 
-                                face then move on to a razor with disposable razor blades.
-                            </p>                               
-                            <div class="price digits"><span>9$</span></div> 
-                        </div>                          
+                    <div class="services_info">
+                        <h4 class="text--golden-glow">Perfect<br>Haircut</h4>
+                        <p>
+                            The haircut begins with a head wash and ends
+                            with the application of hight quality cosmetics.
+                            Each haircut is carefully tailored to the style and shape
+                            of the customer head.
+                        </p>
                     </div>
-                    <div class="service-wrapper glowing-card-wrapper">                            
-                        <div class="icon">
-                            <img src="./img/icons/icon-razor.png"/>
-                        </div>                            
-                        <div class="service-content glowing-card-content">
-                            <h2>Beard trimming</h2>
-                            <p>
-                                Professional beard trimming with a trimmer or scissors, 
-                                tailored to the shape of the face and recommendations 
-                                of the client recommendations.
-                            </p>                               
-                            <div class="price digits"><span>12$</span></div>
-                        </div>                            
+                    <span class="services_price text--golden-glow">15$</span>
+                </div>
+                <div class="services_content col-s-12 col-12">
+                    <div class="icon">
+                        <img src="./img/icons/icon-razor.png" />
                     </div>
-                    <div class="service-wrapper glowing-card-wrapper">                           
-                        <div class="icon">
-                            <img src="./img/icons/icon-razor.png"/>
-                        </div>                               
-                        <div class="service-content glowing-card-content">
-                            <h2>Valhalla combo</h2>
-                            <p>
-                                Haircut, beard cut, wash with shaping, contour with razor or trimmer,
-                                waxing face ears and cheek, hot towel, 
-                                head massage, beard oil.
-                            </p>                               
-                            <div class="price digits"><span>40$</span></div>
-                        </div>                            
+                    <div class="services_info">
+                        <h4 class="text--golden-glow">Razor<br>shave</h4>
+                        <p>
+                            We take a professional and safe approach to shaving.
+                            We start with a hot towel that relaxes the pores and
+                            face then move on to a razor with disposable razor blades.
+                        </p>
                     </div>
+                    <span class="services_price text--golden-glow">9$</span>
+                </div>
+                <div class="services_content col-s-12 col-12">
+                    <div class="icon">
+                        <img src="./img/icons/icon-razor.png" />
+                    </div>
+                    <div class="services_info">
+                        <h4 class="text--golden-glow">Beard<br>trimming</h4>
+                        <p>
+                            Professional beard trimming with a trimmer or scissors,
+                            tailored to the shape of the face and recommendations
+                            of the client recommendations.
+                        </p>
+                    </div>
+                    <span class="services_price text--golden-glow">12$</span>
+                </div>
+                <div class="services_content col-s-12 col-12">
+                    <div class="icon">
+                        <img src="./img/icons/icon-razor.png" />
+                    </div>
+                    <div class="services_info">
+                        <h4 class="text--golden-glow">Valhalla<br>combo</h4>
+                        <p>
+                            Haircut, beard cut, wash with shaping, contour with razor or trimmer,
+                            waxing face ears and cheek, hot towel,
+                            head massage, beard oil.
+                        </p>
+                    </div>
+                    <span class="services_price text--golden-glow">40$</span>
                 </div>
             </div>
         </section>
         <!--END SERVICES-->
+
         <!--END TEAM-->
-        <Section id="team">
-            <div class="team-container container">
-                <h2>Ragnarok team</h2>
-                <h3>Meet our team</h3>
-                <div class="team-box glass-card-box">
-                    <div class="team-wrapper glass-card-wrapper">
-                        <div class="team-content glass-card-content">
-                            <div class="team-img" alt="team member">
-                                <img src="./img/teamPhoto/small-team-photo-mark.jpg"/>
-                            </div>
-                            <div class="team-description">
-                                <h2>Mark Holmes</h2>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing 
-                                elit. Magni inventore dolorum totam exercitationem.
-                                </p>
-                            </div>
-                        </div>
-                        <ul class="social-media">
-                            <li style="--i:1">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            </li>
-                            <li style="--i:2">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                            </li>
-                            <li style="--i:3">
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="team-wrapper glass-card-wrapper">
-                        <div class="team-content glass-card-content">
-                            <div class="team-img" alt="team member">
-                                <img src="./img/teamPhoto/small-team-photo-rachel.jpg"/>
-                            </div>
-                            <div class="team-description">
-                                <h2>Rachel Wilson</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Explicabo eius distinctio amet aliquam accusantium ipsum
-                                    saepe fugit sequi id alias.
-                                </p>
-                            </div>
-                        </div>
-                        <ul class="social-media">
-                            <li style="--i:1">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            </li>
-                            <li style="--i:2">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                            </li>
-                            <li style="--i:3">
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="team-wrapper glass-card-wrapper">
-                        <div class="team-content glass-card-content">
-                            <div class="team-img" alt="team member">
-                                <img src="./img/teamPhoto/small-team-photo-lee.jpg"/>
-                            </div>
-                            <div class="team-description">
-                                <h2>Lee Wu</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, 
-                                adipisicing elit. Suscipit itaque animi quia 
-                                officiis saepe labore.
-                                </p>
-                            </div>
-                        </div>
-                        <ul class="social-media">
-                            <li style="--i:1">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            </li>
-                            <li style="--i:2">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                            </li>
-                            <li style="--i:3">
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="team-wrapper glass-card-wrapper">
-                        <div class="team-content glass-card-content">
-                            <div class="team-img" alt="team member">
-                                <img src="./img/teamPhoto/small-team-photo-ruby.jpg"/>
-                            </div>
-                            <div class="team-description">
-                                <h2>Ruby Burns</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing 
-                                elit. Eveniet voluptate, cumque doloribus necessitatibus 
-                                nostrum adipisci dolor nobis.
-                                </p>
-                            </div>
-                        </div>
-                        <ul class="social-media">
-                            <li style="--i:1">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            </li>
-                            <li style="--i:2">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                            </li>
-                            <li style="--i:3">
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div class="team-box">
+        <Section id="team-section" class="team container">
+            <div class="bg_animation--crosses">
+                <div class="bg-animation_item"></div>
+                <div class="bg-animation_item"></div>
+                <div class="bg-animation_item"></div>
+                <div class="bg-animation_item"></div>
+                <div class="bg-animation_item"></div>
+                <div class="bg-animation_item"></div>
+                <div class="bg-animation_item"></div>
+                <div class="bg-animation_item"></div>
+                <div class="bg-animation_item"></div>
+                <div class="bg-animation_item"></div>
+                <div class="bg-animation_item"></div>
+                <div class="bg-animation_item"></div>
+                <div class="bg-animation_item"></div>
+                <div class="bg-animation_item"></div>
+                <div class="bg-animation_item"></div>
             </div>
-        </Section>
-        <!--END TEAM-->
-        <!--TESTIMONIAL-->
-        <section id="testimonial">
-            <div class="testimonial-container container">
-                <div class="testimonial">
-                <h2>Comments</h2>
-                <h3>Check what they say about us</h3>
-                    <div class="testimonial-box glowing-card-box owl-carousel owl-theme">
-                        <div class="testimonial-wrapper glowing-card-wrapper item">
-                            <i class="fas fa-quote-right quote"></i>
-                            <!-- <div class="testimonial-photo">
-                                <img src="./img/teamPhoto/small-team-photo-mark.jpg" alt="client photo">
-                            </div>                                                      -->
-                            <div class="user-info glowing-card-content">                                   
-                                <h2>John doe</h2>
-                                <div class="stars">
-                                    <span>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </span>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                    Expedita debitis tenetur tempora mollitia hic nisi nam 
-                                    voluptas. In odio, quos veritatis amet quis fugiat expedita. 
-                                    atque impedit eos.
-                                </p>
-                            </div>                            
-                        </div>
-                        <div class="testimonial-wrapper glowing-card-wrapper item">
-                            <i class="fas fa-quote-right quote"></i>
-                            <!-- <div class="testimonial-photo">
-                                <img src="./img/teamPhoto/small-team-photo-mark.jpg" alt="client photo">
-                            </div>                                                      -->
-                            <div class="user-info glowing-card-content">                                   
-                                <h2>John doe</h2>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                    Expedita debitis tenetur tempora mollitia hic nisi nam 
-                                    voluptas. In odio, quos veritatis amet quis fugiat expedita. 
-                                    atque impedit eos.
-                                </p>
-                            </div>                            
-                        </div>
-                        <div class="testimonial-wrapper glowing-card-wrapper item">
-                            <i class="fas fa-quote-right quote"></i>
-                            <!-- <div class="testimonial-photo">
-                                <img src="./img/teamPhoto/small-team-photo-mark.jpg" alt="client photo">
-                            </div>                                                      -->
-                            <div class="user-info glowing-card-content">                                   
-                                <h2>John doe</h2>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                    Expedita debitis tenetur tempora mollitia hic nisi nam 
-                                    voluptas. In odio, quos veritatis amet quis fugiat expedita. 
-                                    atque impedit eos.
-                                </p>
-                            </div>                            
-                        </div>
-                        <div class="testimonial-wrapper glowing-card-wrapper item">
-                            <i class="fas fa-quote-right quote"></i>
-                            <!-- <div class="testimonial-photo">
-                                <img src="./img/teamPhoto/small-team-photo-mark.jpg" alt="client photo">
-                            </div>                                                      -->
-                            <div class="user-info glowing-card-content">                                   
-                                <h2>John doe</h2>
-                                <div class="stars">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-                                <p>
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                                    Expedita debitis tenetur tempora mollitia hic nisi nam 
-                                    voluptas. In odio, quos veritatis amet quis fugiat expedita. 
-                                    atque impedit eos.
-                                </p>
-                            </div>                            
+            <div class="team_intro section-intro col-s-9 col-6">
+                <h2 class="text--golden-glow">Ragnarok team</h2>
+                <h3>Meet our team</h3>
+            </div>
+            <div class="team_wrapper col-s-12 col-9">
+                <div class="team_content col-s-5 col-12">
+                    <div class="team_hexagon">
+                        <img src="./img/teamPhoto/small-team-photo-mark.jpg" alt="Photo of team member - Mark" />
+                        <div class="team_info">
+                            <h4 class="username--shadow">Mark Holmes</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Dolor, alias.
+                            </p>
+                            <ul class="social-media">
+                                <li style="--i:1">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li style="--i:2">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li style="--i:3">
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div >
+                <div class="team_content col-s-5 col-12">
+                    <div class="team_hexagon">
+                        <img src="./img/teamPhoto/small-team-photo-rachel.jpg" alt="Photo of team member - Rachel" />
+                        <div class="team_info">
+                            <h4 class="username--shadow">Rachel Allen</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                Ullam ab consectetur ex! Itaque, nulla odit!
+                            </p>
+                            <ul class="social-media">
+                                <li style="--i:1">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li style="--i:2">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li style="--i:3">
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team_content col-s-5 col-12">
+                    <div class="team_hexagon">
+                        <img src="./img/teamPhoto/small-team-photo-lee.jpg" alt="Photo of team member - Rachel" />
+                        <div class="team_info">
+                            <h4 class="username--shadow">Lee Wu</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Officia dolor a quidem?
+                            </p>
+                            <ul class="social-media">
+                                <li style="--i:1">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li style="--i:2">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li style="--i:3">
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team_content col-s-5 col-12">
+                    <div class="team_hexagon">
+                        <img src="./img/teamPhoto/small-team-photo-ruby.jpg" alt="Photo of team member - Ruby" />
+                        <div class="team_info">
+                            <h4 class="username--shadow">Ruby Burns</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Corrupti qui delectus molestiae minima neque tenetur.
+                            </p>
+                            <ul class="social-media">
+                                <li style="--i:1">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li style="--i:2">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li style="--i:3">
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Section>
+        <!--END TEAM-->
+
+        <!--TESTIMONIAL-->
+        <section id="testimonial-section" class="testimonial container">
+            <div class='testimonial_intro section-intro col-s-9 col-6'>
+                <h2 class="text--golden-glow">Testimonials</h2>
+                <h3>Check what they say about us</h3>
+            </div>
+            <div class="testimonial_box">
+                <div class="testimonial_wrapper">
+                    <div class="testimonial_content">
+                        <i class="fas fa-quote-right quote"></i>                  
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur 
+                            adipisicing elit. Enim, assumenda.
+                        </p>                        
+                        <div class="testimonial_user">
+                            <div class="stars text--golden-glow">
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                            <h4 class="username--shadow">John doe</h4>
+                            <img src="./img/bg/bg-service-hover-beard.jpg" alt="" />
+                        </div>                       
+                    </div>
+                    <div class="testimonial_content">
+                        <i class="fas fa-quote-right quote"></i>                  
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum,
+                            voluptatibus!
+                        </p>
+                        <div class="testimonial_user">
+                            <div class="stars text--golden-glow">
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                            <h4 class="username--shadow">John doe</h4>
+                            <img src="./img/bg/bg-service-hover-beard.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="testimonial_content">
+                        <i class="fas fa-quote-right quote"></i>                  
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Provident fugit, unde blanditiis accusamus nobis aut.
+                        </p>
+                        <div class="testimonial_user">
+                            <div class="stars text--golden-glow">
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                            <h4 class="username--shadow">John doe</h4>
+                            <img src="./img/bg/bg-service-hover-beard.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="testimonial_content">
+                        <i class="fas fa-quote-right quote"></i>                  
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Qui corporis provident illum mollitia earum eligendi.
+                        </p>
+                        <div class="testimonial_user">
+                            <div class="stars text--golden-glow">
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                            <h4 class="username--shadow">John doe</h4>
+                            <img src="./img/bg/bg-service-hover-beard.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="testimonial_content">
+                        <i class="fas fa-quote-right quote"></i>                  
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, 
+                            adipisicing elit. Expedita vero sequi veniam!
+                        </p>
+                        <div class="testimonial_user">
+                            <div class="stars text--golden-glow">
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                            <h4 class="username--shadow">John doe</h4>
+                            <img src="./img/bg/bg-service-hover-beard.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="testimonial_content">
+                        <i class="fas fa-quote-right quote"></i>                  
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Quam dicta quas cum, ea vel hic unde.
+                        </p>
+                        <div class="testimonial_user">
+                            <div class="stars text--golden-glow">
+                                <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                            <h4 class="username--shadow">John doe</h4>
+                            <img src="./img/bg/bg-service-hover-beard.jpg" alt="" />
+                        </div>
+                    </div>                 
+                </div>
+            </div>
         </section>
-    <!--END TESTIMONIAL-->
+        <!--END TESTIMONIAL-->
     </main>
-    <!--FOOTER-->
-    <footer id="footer">
-        <div class="footer-container">
-            <div class="company-logo-details">
-                <h2 class="logo-name">Ragnarok Barber</h2>
-                <img src="./img/icons/icon-razor.png"/>
+    <!-----FOOTER----->
+    <footer id="footer-section" class="footer">
+        <div class="footer_top">
+            <div class="company">
+                <h3 class="brand">Ragnarok<br>Barber</h3>
+                <div class="logo icon">
+                    <img src="./img/icons/logo-R.png" alt="...">
+                </div>
             </div>
-                <div class="footer-box">
-                    <h3>Look at our social media</h3>
-                    <ul class="social-media">
-                        <li><a href="#"><i class="fa fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class=" fa fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class=" fa fa-brands fa-square-instagram"></i></a></li>
-                        <li><a href="#"><i class=" fa fa-solid fa-book"></i></a></li>
-                    </ul>
-                    <h3>Contact us</h3>
-                    <ul class="company-details">
-                        <li>
-                        <i class="fa-sharp fa-solid fa-location-dot"></i>
-                        <p>160 Nassau Ave, Brooklyn, New York</p>
-                        </li>
-                        <li>
-                        <i class="fas fa-phone"></i>
-                        <p class="digits">+1 718 389 4289</p>
-                        </li>
-                        <li>
-                        <i class="fas fa-envelope"></i>
-                        <p>exemple@ex.com</p>
-                        </li>
-                    </ul>
-                <p class="copyright">
-                    Copyright &copy; 2020 <strong>Ragnarok barber</strong>
-                    All rights reeserved.
-                </p>
-            </div>
+            <ul class="footer_social-media">
+                <li>
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-book"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer_bottom">
+            <p class="copyrights">&copy; 2022 Ragnarok. All rights reserved.</p>
         </div>
     </footer>
-    <!--END FOOTER-->
-    
-    <!--SCRIPTS-->
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-    crossorigin="anonymous"></script>
-
-    <script src="./OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
-    <script src="./OwlCarousel2-2.3.4/dist/owl.carousel.js"></script>
-
-    <script src="scripts.js"></script>
+    <!----- END FOOTER----->
+    <!-----SCRIPTS----->
+    <script src="script.js"></script>
 </body>
+
 </html>
